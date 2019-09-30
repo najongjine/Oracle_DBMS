@@ -1,0 +1,11 @@
+--table 명명 패턴 tbl_
+
+create table tbl_student(
+    st_num,
+    st_name,
+    st_addr,
+    st_tel,
+    st_grade,
+    st_dept,
+    st_age
+);

@@ -1,0 +1,82 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 월요일-12월-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table TBL_BLOODTEST
+--------------------------------------------------------
+
+  CREATE TABLE "TBL_BLOODTEST" 
+   (	"BLD_SEQ" NUMBER, 
+	"BLD_NAME" NVARCHAR2(50), 
+	"BLD_NORMALMIN" NUMBER, 
+	"BLD_NORMALMAX" NUMBER, 
+	"BLD_OVERNORMAL" NVARCHAR2(1000), 
+	"BLD_BELOWNORMAL" NVARCHAR2(1000), 
+	"BLD_NAME_KOR" NVARCHAR2(100)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TBL_LUNG
+--------------------------------------------------------
+
+  CREATE TABLE "TBL_LUNG" 
+   (	"LUNG_SEQ" NUMBER, 
+	"LUNG_IMGURL" NVARCHAR2(1000), 
+	"LUNG_NAME" NVARCHAR2(1000), 
+	"LUNG_EXPLCODE" NVARCHAR2(1000)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TBL_LUNGEXPL
+--------------------------------------------------------
+
+  CREATE TABLE "TBL_LUNGEXPL" 
+   (	"LUNG_E_SEQ" NUMBER, 
+	"LUNG_E_CODE" NVARCHAR2(1000), 
+	"LUNG_E_EXPL" NVARCHAR2(1000), 
+	"LUNG_E_NAME" NVARCHAR2(1000)
+   ) ;
+REM INSERTING into TBL_BLOODTEST
+SET DEFINE OFF;
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (1,'WBC',6,12,'증가 – 감염, 급만성 백혈병 임신','감소 – 재생불량선 빈혈, 골수이형성 증후군, 급성 백혈병, 항암 치료후등',null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (2,'RBC',5.5,8.5,'증가 : 탈수, 심폐질환, 다혈구혈증, 쇼크, 신장암, 구토, 설사등 의심','감소는 실혈성 빈혈, 용혈 (약물, 신수종, 양파등) 적혈구 생산불량, 골수억제 의심',null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (3,'Hemoglobin(HB)',12,18,'적혈구의 산소 운반능력 판정 낮으면 산소를 제대로 운반하지 못하게 됨.','감소: 빈혈, 출혈, 철 결핍 의미',null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (4,'Hematocrit(Hct)',37,55,'감소: 탈수 판정 /25%이하면 심각한 빈혈- 수혈필요',null,null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (5,'Platelet',200,500,'혈소판의 개수가 적으면 지혈작용에 문제가 있다. - 잦은출혈',null,null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (6,'MPV',6.7,11.1,'증가 : 혈소판 파괴 – 염증성 잘 질환, 백혈병, 골수','감소: 재생불량성 빈혈, 혈소판 수치가 정상이면서 MPV가 낮은 경우는 만성신부전증일 경우가 있다.',null);
+Insert into TBL_BLOODTEST (BLD_SEQ,BLD_NAME,BLD_NORMALMIN,BLD_NORMALMAX,BLD_OVERNORMAL,BLD_BELOWNORMAL,BLD_NAME_KOR) values (21,'test1',6,12,'test1','test12',null);
+REM INSERTING into TBL_LUNG
+SET DEFINE OFF;
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (3,'55148bbf-8f1e-4985-80c8-18d5e4c3608bdog_cough.jpg','감기','l_e0001');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (81,null,null,'l_e0003');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (82,null,null,'l_e0004');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (84,null,null,'l_e0006');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (85,null,null,'l_e0007');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (86,null,null,'l_e0008');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (87,null,null,'l_e0009');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (88,null,null,'l_e0010');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (89,null,null,'l_e0011');
+Insert into TBL_LUNG (LUNG_SEQ,LUNG_IMGURL,LUNG_NAME,LUNG_EXPLCODE) values (21,'29b94bf6-8f22-402a-982d-2f3cec6116e3lung_pneumothorax.png','기흉','l_e0002');
+REM INSERTING into TBL_LUNGEXPL
+SET DEFINE OFF;
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (65,null,'test2',null);
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (63,'l_0003','etes',null);
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (64,null,'test',null);
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (66,null,'test',null);
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (67,null,'111',null);
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (1,'l_e0001','updated2','l_e0001');
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (3,'l_e0001','test31','l_e0001');
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (21,'l_e0002','호흡이 빠르고 가파져서 강아지가 괴로워 합니다','기흉');
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (22,'l_e0002','눕기를 싫어하며 운동을 하지 못합니다.','기흉');
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (23,'l_e0002','앞다리로 버티고 움직이는것을 피합니다.','기흉');
+Insert into TBL_LUNGEXPL (LUNG_E_SEQ,LUNG_E_CODE,LUNG_E_EXPL,LUNG_E_NAME) values (24,'l_e0002','호흡곤란이나 혀나 입술이 보라색이 되는 청색증 증상을 보이게 됩니다.','기흉');
+--------------------------------------------------------
+--  DDL for Index SYS_C007230
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C007230" ON "TBL_BLOODTEST" ("BLD_SEQ") 
+  ;
+--------------------------------------------------------
+--  Constraints for Table TBL_BLOODTEST
+--------------------------------------------------------
+
+  ALTER TABLE "TBL_BLOODTEST" ADD PRIMARY KEY ("BLD_SEQ") ENABLE;
+  ALTER TABLE "TBL_BLOODTEST" MODIFY ("BLD_NAME" NOT NULL ENABLE);
